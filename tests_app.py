@@ -6,7 +6,7 @@ from app import db
 
 class TestIntegration(unittest.TestCase):
 
-    def test_valid_post(self):
+    def correctInputTest(self):
         expression = "1 + 1"
         value = 2
 
@@ -22,7 +22,7 @@ class TestIntegration(unittest.TestCase):
 
   
 
-    def test_database_entry(self):
+    def databaseTest(self):
         entry_count = Expression.query().count()
 
         self.assertEqual(1, entry_count)
